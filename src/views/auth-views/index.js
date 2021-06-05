@@ -8,6 +8,8 @@ export const AppViews = () => {
     <Suspense fallback={<Loading cover="page"/>}>
       <Switch>
         <Route path={`${AUTH_PREFIX_PATH}/login`} component={lazy(() => import(`./authentication/login`))} />
+        <Route path={`${AUTH_PREFIX_PATH}/emplogin`} component={lazy(() => import(`./components/employeeLogin`))} />
+
         <Route path={`${AUTH_PREFIX_PATH}/login-1`} component={lazy(() => import(`./authentication/login-1`))} />
         <Route path={`${AUTH_PREFIX_PATH}/login-2`} component={lazy(() => import(`./authentication/login-2`))} />
         <Route path={`${AUTH_PREFIX_PATH}/register-1`} component={lazy(() => import(`./authentication/register-1`))} />

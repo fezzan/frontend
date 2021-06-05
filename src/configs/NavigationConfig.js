@@ -1,4 +1,4 @@
-import {CarryOutOutlined , OrderedListOutlined ,DashboardOutlined, BankOutlined,DollarCircleOutlined,ProfileOutlined,DribbbleOutlined,UnorderedListOutlined,UserOutlined,InteractionOutlined       } from "@ant-design/icons";
+import {CarryOutOutlined , OrderedListOutlined ,DashboardOutlined,UsergroupAddOutlined , BankOutlined,DollarCircleOutlined,ProfileOutlined,DribbbleOutlined,UnorderedListOutlined,UserOutlined,InteractionOutlined       } from "@ant-design/icons";
 import { APP_PREFIX_PATH } from "configs/AppConfig";
 import Icon from '@ant-design/icons';
 const Consititution = () => (
@@ -13,6 +13,16 @@ const dashBoardNavTree = [
     breadcrumb: false,
     submenu: [],
   },
+
+  {
+    key: "employee",
+    path: `${APP_PREFIX_PATH}/employee`,
+    title: "Employee",
+    icon: UsergroupAddOutlined ,
+    breadcrumb: false,
+    submenu: [],
+  },
+
 
   {
     key: "charity",

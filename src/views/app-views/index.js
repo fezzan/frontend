@@ -244,6 +244,40 @@ export const AppViews = () => {
           component={lazy(() => import(`./defined_rules/add`))}
         />
 
+
+        {/* Employee Routes  */}
+
+        <Route
+          path={`${APP_PREFIX_PATH}/employee/edit/:id`}
+          component={lazy(() => import(`./employee/edit`))}
+        />
+        <Route
+          path={`${APP_PREFIX_PATH}/employee/add`}
+          component={lazy(() => import(`./employee/add`))}
+        />
+        <Route
+          path={`${APP_PREFIX_PATH}/employee`}
+          component={lazy(() => import(`./employee`))}
+        />
+
+        {/* Defined Rules Routes  */}
+
+        <Route
+          path={`${APP_PREFIX_PATH}/defined_rules/edit/:id`}
+          component={lazy(() => import(`./defined_rules/edit`))}
+        />
+        <Route
+          path={`${APP_PREFIX_PATH}/defined_rules`}
+          component={lazy(() => import(`./defined_rules`))}
+        />
+
+        <Route
+          path={`${APP_PREFIX_PATH}/rule/add`}
+          component={lazy(() => import(`./defined_rules/add`))}
+        />
+
+
+
         {/* Level Routes  */}
 
         <Route

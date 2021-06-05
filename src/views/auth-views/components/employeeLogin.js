@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 import { AUTHENTICATED, AUTH_TOKEN } from "redux/constants/Auth";
 import { API_BASE_URL } from "configs/AppConfig";
 
-export const LoginForm = (props) => {
+export const EmployeeLoginForm = (props) => {
   let dispatch = useDispatch();
   let history = useHistory();
 
@@ -92,10 +92,17 @@ export const LoginForm = (props) => {
       >
         <Alert type="error" showIcon message={message}></Alert>
       </motion.div>
+
+      <center style={{ padding:"150px"}} >
+        <h1 style={{ fontWeight: "bold"}}>Employee Sign In </h1>
+        <br></br>        <br></br>
+        <br></br>
+
+      <div style={{ height: "200px",width:"300px"}}>
       <Form layout="vertical" name="login-form" onFinish={onLogin}>
         <Form.Item
           name="email"
-          label="Email"
+          label="Employee Email"
           rules={[
             {
               required: true,
@@ -142,28 +149,26 @@ export const LoginForm = (props) => {
 
         <Form.Item>
           <Button type="primary" htmlType="submit" block loading={load}>
-            Log In
+           Employee Log In
           </Button>
         </Form.Item>
-        <a href="http://localhost:3000/auth/emplogin"> 
-        <Button type="primary" block loading={load}>
-             Employee Log In
-          </Button>
-          </a>
+
       
         {extra}
       </Form>
+      </div>
+      </center>
     </>
   );
 };
 
-LoginForm.propTypes = {
+EmployeeLoginForm.propTypes = {
   otherSignIn: PropTypes.bool,
   showForgetPassword: PropTypes.bool,
   extra: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
-LoginForm.defaultProps = {
+EmployeeLoginForm.defaultProps = {
   otherSignIn: true,
   showForgetPassword: false,
 };
@@ -180,4 +185,4 @@ const mapDispatchToProps = {
   authenticated,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(mapStateToProps, mapDispatchToProps)(EmployeeLoginForm);
